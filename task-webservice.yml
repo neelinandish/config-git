@@ -18,6 +18,7 @@ spring:
     resource: 
       #userInfoUri: http://${authserver.hostname}:${authserver.port}/${authserver.contextPath}/me
       userInfoUri: http://${authserver.hostname}:${authserver.port}/${authserver.contextPath}/userinfo
+      uaaUri: http://${authserver.hostname}:${authserver.port}/${authserver.contextPath}/
       preferTokenInfo: false 
     client:
       accessTokenUri: http://${authserver.hostname}:${authserver.port}/${authserver.contextPath}/oauth/token
