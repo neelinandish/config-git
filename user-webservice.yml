@@ -37,6 +37,12 @@ spring:
       ddl-auto: update
 
 ---
+swagger:
+  publish:
+    publish-url: https://demo.grokola.com/swagger/publish/14
+    swagger-url: http://localhost:8765/api/user/v2/api-docs
+
+
 # user-webservice instance when used on Docker
 spring:
   profiles: docker
