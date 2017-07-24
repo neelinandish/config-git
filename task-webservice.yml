@@ -20,11 +20,18 @@ spring:
       userInfoUri: http://${authserver.hostname}:${authserver.port}/${authserver.contextPath}/userinfo
       uaaUri: http://${authserver.hostname}:${authserver.port}/${authserver.contextPath}/
       preferTokenInfo: false 
-    client:
-      accessTokenUri: http://${authserver.hostname}:${authserver.port}/${authserver.contextPath}/oauth/token
-      userAuthorizationUri: http://${authserver.hostname}:${authserver.port}/${authserver.contextPath}/oauth/authorize
-      clientId: client
-      
+       spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/uaa
+    username: root
+    password: password
+    driver-class: com.mysql.jdbc.Driver
+  
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    show-sql: false
+    hibernate:
+      ddl-auto: update
 ---
 # task-webservice instance when used on Docker
 spring:
